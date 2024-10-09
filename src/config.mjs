@@ -18,3 +18,34 @@ export default {
 
     }
 }
+
+// src/content/config.ts
+import { defineCollection } from 'astro:content';
+
+const blog = defineCollection({
+    type: 'content',
+    schema: ({ image }) => ({
+        title: { type: 'string' },
+        description: { type: 'string' },
+        // Vous pouvez ajouter d'autres champs ici
+    }),
+});
+
+
+const page = defineCollection({
+    type: 'content',
+    schema: ({ image }) => ({
+        title: { type: 'string' },
+        description: { type: 'string' },
+        // Vous pouvez ajouter d'autres champs ici
+    }),
+});
+
+
+export const collections = {
+    blog,
+    page
+};
+
+
+
